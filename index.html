@@ -156,40 +156,81 @@
   .before-site .side b{display:block;margin-bottom:6px;font-size:10px}
   .before-site .side .cnt{background:#000;color:#3f3;font-family:var(--mono);padding:2px 5px;display:inline-block;margin-top:4px;letter-spacing:2px;font-size:10px}
   .before-site .foot{background:#7c1f1f;color:#ffe;text-align:center;padding:5px;font-size:9px}
-  .after-site{background:#0B0E14;font-family:var(--body);color:#EDEFF5;position:relative;overflow:hidden}
+  .after-site{background:#FFFBF4;font-family:var(--body);color:#2B2118;position:relative;overflow:hidden}
   .after-site::before{
     content:"";position:absolute;inset:0;pointer-events:none;
-    background:radial-gradient(420px 220px at 78% 8%,rgba(53,229,255,.16),transparent 65%),
-               radial-gradient(360px 220px at 8% 100%,rgba(255,61,242,.1),transparent 65%);
+    background:radial-gradient(460px 240px at 80% -10%,rgba(245,159,0,.22),transparent 65%),
+               radial-gradient(380px 220px at 0% 110%,rgba(232,89,12,.1),transparent 65%);
   }
-  .after-site .nav2{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.07);position:relative}
-  .after-site .nav2 b{font-family:var(--disp);font-variation-settings:"wdth" 120,"wght" 800;font-size:12px;letter-spacing:.05em}
+  .after-site .nav2{display:flex;justify-content:space-between;align-items:center;padding:11px 18px;border-bottom:1px solid #F0E6D6;position:relative;background:rgba(255,255,255,.6)}
+  .after-site .nav2 b{font-family:var(--disp);font-variation-settings:"wdth" 120,"wght" 800;font-size:12px;letter-spacing:.05em;color:#2B2118}
+  .after-site .awning{height:10px;display:flex;overflow:hidden}
+  .after-site .awning i{
+    flex:1;min-width:22px;height:20px;border-radius:0 0 99px 99px;margin-top:-10px;
+  }
+  .after-site .awning i:nth-child(odd){background:#E8590C}
+  .after-site .awning i:nth-child(even){background:#FFF3E0}
+  .after-site .hero2{flex:1;padding:14px 18px 12px;display:grid;grid-template-columns:1.25fr 1fr;gap:14px;align-items:center;position:relative}
+  .after-site .h2l{display:flex;flex-direction:column;gap:9px;min-width:0}
+  .after-site .food{
+    position:relative;background:linear-gradient(180deg,#FFEFD6,#FFE3BD);
+    border:1px solid #F3DEBB;border-radius:14px;height:88%;max-height:190px;
+    display:flex;align-items:center;justify-content:center;overflow:hidden;
+    box-shadow:0 14px 30px -16px rgba(232,89,12,.4);
+  }
+  .after-site .food::before{
+    content:"";position:absolute;width:150%;aspect-ratio:1;border-radius:50%;
+    background:repeating-conic-gradient(from 0deg,rgba(245,159,0,.14) 0 9deg,transparent 9deg 18deg);
+    top:-60%;left:-25%;
+  }
+  .after-site .food svg{width:78%;height:auto;position:relative;filter:drop-shadow(0 8px 10px rgba(122,60,10,.25))}
+  .after-site .food .photo{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;
+  }
+  .after-site .food::after{
+    content:"";position:absolute;inset:55% 0 0 0;z-index:3;pointer-events:none;
+    background:linear-gradient(180deg,transparent,rgba(43,26,10,.55));
+  }
+  .after-site .ptag{
+    position:absolute;bottom:9px;left:9px;z-index:4;
+    background:rgba(255,251,244,.95);color:#2B2118;border-radius:8px;
+    padding:5px 9px;font-size:8.5px;font-weight:800;letter-spacing:.02em;
+    box-shadow:0 4px 12px rgba(43,33,24,.35);
+  }
+  .after-site .ptag em{font-style:normal;color:#E8590C}
+  @media(max-width:700px){
+    .after-site .hero2{grid-template-columns:1fr}
+    .after-site .food{display:none}
+  }
   .after-site .pill{
-    background:rgba(29,217,138,.12);color:#1DD98A;border:1px solid rgba(29,217,138,.35);
+    background:rgba(37,166,91,.1);color:#1E7A44;border:1px solid rgba(37,166,91,.35);
     border-radius:99px;padding:5px 11px 5px 9px;font-size:9.5px;font-weight:700;
     display:inline-flex;align-items:center;gap:5px;
   }
-  .after-site .pill i{width:6px;height:6px;border-radius:50%;background:#1DD98A;animation:live 1.6s ease-in-out infinite}
-  @keyframes live{0%,100%{box-shadow:0 0 0 0 rgba(29,217,138,.5)}50%{box-shadow:0 0 0 5px rgba(29,217,138,0)}}
-  .after-site .hero2{flex:1;padding:20px 18px 16px;display:flex;flex-direction:column;justify-content:center;gap:10px;position:relative}
-  .after-site .hero2 h4{font-family:var(--disp);font-variation-settings:"wdth" 115,"wght" 850;font-size:22px;line-height:1.02;max-width:22ch;text-transform:uppercase;letter-spacing:.01em}
-  .after-site .hero2 h4 em{font-style:normal;background:linear-gradient(100deg,#35E5FF,#7EF0FF);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .after-site .hero2 p{font-size:10.5px;color:#9AA3B5;max-width:40ch}
+  .after-site .pill i{width:6px;height:6px;border-radius:50%;background:#25A65B;animation:live 1.6s ease-in-out infinite}
+  @keyframes live{0%,100%{box-shadow:0 0 0 0 rgba(37,166,91,.45)}50%{box-shadow:0 0 0 5px rgba(37,166,91,0)}}
+  .after-site .hero2{flex:1;padding:16px 18px 14px;display:flex;flex-direction:column;justify-content:center;gap:9px;position:relative}
+  .after-site .hero2 h4{font-family:var(--disp);font-variation-settings:"wdth" 115,"wght" 850;font-size:19px;line-height:1.02;max-width:22ch;text-transform:uppercase;letter-spacing:.01em;color:#2B2118}
+  .after-site .hero2 h4 em{font-style:normal;background:linear-gradient(100deg,#E8590C,#F59F00);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .after-site .hero2 p{font-size:10.5px;color:#7A6E5E;max-width:40ch}
   .after-site .cta-row{display:flex;gap:8px;align-items:center}
-  .after-site .cta2{background:#EDEFF5;color:#0B0E14;border-radius:8px;padding:8px 15px;font-size:10px;font-weight:800}
-  .after-site .cta3{border:1px solid rgba(255,255,255,.16);color:#C9D0DE;border-radius:8px;padding:8px 13px;font-size:10px;font-weight:600}
-  .after-site .strip{display:flex;gap:7px;margin-top:4px}
-  .after-site .ph{flex:1;aspect-ratio:16/9;border-radius:8px;border:1px solid rgba(255,255,255,.08)}
-  .after-site .ph.p1{background:linear-gradient(135deg,#173B4E,#2E7D9C)}
-  .after-site .ph.p2{background:linear-gradient(135deg,#3E2A14,#B07A32)}
-  .after-site .ph.p3{background:linear-gradient(135deg,#2A1633,#7A3FA8)}
+  .after-site .cta2{background:#E8590C;color:#FFF9F0;border-radius:8px;padding:8px 15px;font-size:10px;font-weight:800;box-shadow:0 6px 16px -6px rgba(232,89,12,.55)}
+  .after-site .cta3{border:1px solid #E4D7C2;color:#5C5142;border-radius:8px;padding:8px 13px;font-size:10px;font-weight:700;background:#fff}
+  .after-site .reviews{display:flex;gap:8px;margin-top:5px}
+  .after-site .rev{
+    flex:1;background:#fff;border:1px solid #F0E6D6;border-radius:10px;padding:8px 10px;
+    font-size:8.5px;color:#5C5142;line-height:1.4;box-shadow:0 4px 14px -8px rgba(43,33,24,.2);
+  }
+  .after-site .rev b{display:block;color:#F59F00;font-size:9px;letter-spacing:1px;margin-bottom:2px}
+  .after-site .rev span{display:block;margin-top:3px;font-weight:700;color:#2B2118;font-size:8px}
   .after-site .rate{
-    position:absolute;top:14px;right:14px;background:rgba(11,14,20,.85);
-    border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:7px 11px;
-    font-size:9px;color:#C9D0DE;box-shadow:0 8px 24px rgba(0,0,0,.5);
+    position:absolute;top:12px;right:14px;background:rgba(255,255,255,.92);
+    border:1px solid #F0E6D6;border-radius:10px;padding:7px 11px;
+    font-size:9px;color:#5C5142;box-shadow:0 8px 24px -10px rgba(43,33,24,.35);
     backdrop-filter:blur(6px);
   }
-  .after-site .rate b{display:block;color:#FFD84D;font-size:11px;letter-spacing:1px}
+  .after-site .rate b{display:block;color:#F59F00;font-size:11px;letter-spacing:1px}
+  @media(max-width:700px){.after-site .rev:nth-child(3){display:none}.after-site .hero2 h4{font-size:18px}}
   .ba-stats{display:grid;gap:12px;margin-top:22px}
   @media(min-width:700px){.ba-stats{grid-template-columns:repeat(3,1fr)}}
   .stat{
@@ -426,18 +467,48 @@
         <div class="ba-layer ba-after-clip" id="baAfter">
           <div class="site after-site" aria-hidden="true">
             <div class="nav2"><b>SUNRISE DINER</b><span class="pill"><i></i>Open · kitchen until 3pm</span></div>
+            <div class="awning"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
             <div class="hero2">
               <span class="rate"><b>★★★★★</b>4.9 · 612 reviews</span>
-              <h4>Breakfast worth <em>waking up for.</em></h4>
-              <p>Scratch-made pancakes, bottomless coffee, and the same corner booth since 1987.</p>
-              <div class="cta-row">
-                <span class="cta2">Book a table</span>
-                <span class="cta3">View menu</span>
+              <div class="h2l">
+                <h4>Breakfast worth <em>waking up for.</em></h4>
+                <p>Scratch-made pancakes, bottomless coffee, and the same corner booth since 1987.</p>
+                <div class="cta-row">
+                  <span class="cta2">Book a table</span>
+                  <span class="cta3">View menu</span>
+                </div>
+                <div class="reviews">
+                  <div class="rev"><b>★★★★★</b>"The blueberry pancakes are worth the drive alone."<span>— Marcy T.</span></div>
+                  <div class="rev"><b>★★★★★</b>"Booked online in 10 seconds. Coffee never stopped."<span>— Dev R.</span></div>
+                </div>
               </div>
-              <div class="strip">
-                <span class="ph p1"></span>
-                <span class="ph p2"></span>
-                <span class="ph p3"></span>
+              <div class="food">
+                <img class="photo" src="https://images.unsplash.com/photo-1757635964104-67218db55bca?q=80&amp;w=800&amp;auto=format&amp;fit=crop" alt="Tall stack of golden pancakes" loading="lazy" onerror="this.remove()">
+                <span class="ptag">Blueberry Short Stack · <em>$8.90</em></span>
+                <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a pancake stack with butter and syrup">
+                  <!-- steam -->
+                  <path d="M70 26c-5 8 5 10 0 18M100 18c-5 8 5 10 0 18M130 26c-5 8 5 10 0 18" fill="none" stroke="#E8B76A" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+                  <!-- plate -->
+                  <ellipse cx="100" cy="146" rx="86" ry="16" fill="#FFFDF8" stroke="#EAD9BC" stroke-width="2"/>
+                  <ellipse cx="100" cy="142" rx="70" ry="11" fill="#FDF3E0"/>
+                  <!-- pancakes -->
+                  <ellipse cx="100" cy="128" rx="62" ry="15" fill="#E9A94E"/>
+                  <ellipse cx="100" cy="122" rx="62" ry="15" fill="#F5C169"/>
+                  <ellipse cx="100" cy="112" rx="58" ry="14" fill="#E9A94E"/>
+                  <ellipse cx="100" cy="106" rx="58" ry="14" fill="#F7C874"/>
+                  <ellipse cx="100" cy="96" rx="54" ry="13" fill="#E9A94E"/>
+                  <ellipse cx="100" cy="90" rx="54" ry="13" fill="#F9CE7E"/>
+                  <!-- syrup -->
+                  <path d="M48 86c0-9 23-16 52-16s52 7 52 16c0 6-8 10-14 12 2 5-3 9-8 8 0 5-7 8-12 6-3 4-11 5-15 1-5 4-13 3-16-1-5 3-12 1-13-4-6 1-11-3-9-8-9-2-17-7-17-14z" fill="#C2601B"/>
+                  <path d="M60 84c8-5 25-8 40-8s32 3 40 8" fill="none" stroke="#A94F12" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+                  <!-- butter -->
+                  <rect x="86" y="58" width="28" height="16" rx="3" fill="#FFE79E" stroke="#EDC96A" stroke-width="2"/>
+                  <!-- berries -->
+                  <circle cx="52" cy="132" r="7" fill="#7A4FB0"/>
+                  <circle cx="150" cy="130" r="7" fill="#7A4FB0"/>
+                  <circle cx="160" cy="138" r="6" fill="#5D3B8C"/>
+                  <circle cx="42" cy="139" r="6" fill="#5D3B8C"/>
+                </svg>
               </div>
             </div>
           </div>
@@ -585,6 +656,7 @@
         </div>
       </div>
       <p class="pricing-note">Not sure which fits? <a href="#contact">Send a note</a> — I'll tell you straight, even if the answer is the cheaper one.</p>
+      <p class="pricing-note" style="margin-top:10px;font-size:.7rem;opacity:.75">✳ Prices negotiable — tight budget or bigger scope, <a href="#contact">talk to me</a> and we'll find a number that works.</p>
     </div>
   </section>
 
@@ -629,7 +701,9 @@
       </div>
       <div class="contact-inner">
         <p class="sec-sub rv">Two sentences is plenty. Replies within one business day with an honest recommendation — including "you don't need me yet" if that's the truth.</p>
-        <form id="contactForm" class="rv" novalidate>
+        <form id="contactForm" class="rv" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="contact">
+          <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
           <div>
             <label for="cname">Name</label>
             <input id="cname" name="name" type="text" autocomplete="name" required>
@@ -795,8 +869,9 @@
     setTimeout(pulse, 500);
   }
 
-  /* ---------- Contact form (front-end only) ---------- */
-  document.getElementById("sendBtn").addEventListener("click", () => {
+  /* ---------- Contact form → Netlify Forms ---------- */
+  document.getElementById("sendBtn").addEventListener("click", async () => {
+    const form = document.getElementById("contactForm");
     const name = document.getElementById("cname").value.trim();
     const email = document.getElementById("cemail").value.trim();
     const status = document.getElementById("formStatus");
@@ -804,7 +879,19 @@
       status.textContent = "Add your name and a valid email so I can reply.";
       return;
     }
-    status.textContent = "Thanks, " + name.split(" ")[0] + " — message noted. Connect a form service (Formspree, Netlify Forms) to receive these by email.";
+    status.textContent = "Sending…";
+    try {
+      const res = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString()
+      });
+      if (!res.ok) throw new Error("Bad response");
+      form.reset();
+      status.textContent = "Sent. Thanks, " + name.split(" ")[0] + " — expect a reply within one business day.";
+    } catch (err) {
+      status.textContent = "Couldn't send right now. Email me directly at hello@bunchwebdesigns.com.";
+    }
   });
 </script>
 
